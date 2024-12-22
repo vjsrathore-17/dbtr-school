@@ -1,11 +1,14 @@
-.headline {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.headline-background {
     background-image: url('/background.png');
     background-size: cover; /* Ensures the image covers the entire container */
     background-position: center; /* Centers the image within the container */
     background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+.headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
     width: 100%; /* Adjust the container width as needed */
     height: 449px;
     .title {
@@ -31,12 +34,14 @@
 }
 
 .event-categories {
-    margin-top: 60px;
+    margin-top: 50px;
+    padding: 0 160px;
     text-align: left;
     .category {
         border: 1px solid #D0D0D0;
         border-radius: 30px;
         margin-right: 20px;
+        margin-top: 10px;
         cursor: pointer;
         color: #4E4E4F;
         background-color: #F4F4F4;
@@ -59,8 +64,75 @@
 }
 
 .event-list {
-    .card {
-        height: 400px;
-        color: #4E4E4F;
+    display: grid;
+    padding: 0 160px;
+    grid-template-columns: repeat(auto-fill, [col-start] minmax(340px, 1fr) [col-end]);
+    grid-gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.view-more {
+    margin: 20px auto;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+  
+.overlay-content {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    .desc {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5%;
+        box-sizing: border-box;
     }
+    .arrow {
+        position: absolute;
+        cursor: pointer;
+        bottom: 50%;
+        background: none;
+        border: none;
+        &.left {
+            left: 0;
+        }
+        &.right {
+            right: 0;
+        }
+        &.btn-disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    }
+}
+  
+.magnified-image {
+    max-width: 90%;
+    max-height: 80vh;
+    margin-bottom: 10px;
+    border-radius: 16px;
+}
+  
+.close-button {
+    position: absolute;
+    background: none;
+    border: none;
+    top: -15px;
+    right: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }

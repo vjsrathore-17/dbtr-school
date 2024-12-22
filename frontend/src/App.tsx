@@ -1,10 +1,9 @@
-// import { useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
-import Home from './components/Home'
-import Academics from './components/Academics'
-import LifeAtDTBR from './components/LifeAtDTBR'
-import Contact from './components/Contact'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import Home from './pages/Home';
+import Academics from './pages/Academics';
+import LifeAtDTBR from './pages/LifeAtDTBR';
+import Contact from './pages/Contact';
 
 function App() {
   return (

@@ -1,4 +1,5 @@
 @import './common.scss';
+
 .top_app_bar {
     display: grid;
     background-color: #fff;
@@ -43,4 +44,115 @@
 .body {
     overflow: auto;
     padding-top: 64px;
+    box-sizing: border-box;
+}
+
+.footer {
+    height: 485px;
+    color: #4A4A4A;
+    padding-left: 160px;
+    padding-right: 160px;
+    box-sizing: border-box;
+    text-align: left;
+    width: 100%;
+    background-color: #F5F5F5;
+    .top {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 60px 0 30px 0;
+        .header {
+            font-weight: 700;
+        }
+        .school-details {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            .school-logo {
+                img {
+                    width: 118px;
+                    height: 138px;
+                }
+            }
+            .school-info {
+                width: 193px;
+                .name {
+                    font-family: Playfair Display;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 23.99px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;                
+                }
+                .quote {
+                    font-family: Poppins;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 24.76px;
+                    letter-spacing: 0.1em;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    
+                }
+                .desc {
+                    font-family: Poppins;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 24.76px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;                
+                }
+            }
+        }
+        .quick-links {
+            min-width: 173px;
+            a {
+                display: block;
+                text-decoration: none;
+                color: #4A4A4A;
+                &:hover {
+                    color: #F54E39;
+                }
+            }
+        }
+        .contact {
+            max-width: 160px;
+        }
+        .donate {
+            font-family: Playfair Display;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 26.66px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            max-width: 200px;
+            button {
+                margin-top: 20px;
+            }
+        }
+        border-bottom: 1px solid #CCCCCC;
+    }
+    .bottom {
+        padding: 20px 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        .right {
+            box-sizing: border-box;
+            display: flex;
+            gap: 10px;
+            img {
+                height: 24px;
+            }
+        }
+    }
+}
+.watermark {
+    img {
+        margin-left: 10px;
+    }
 }

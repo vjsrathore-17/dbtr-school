@@ -536,7 +536,8 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<'ncc'>;
-    cover: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+    cover: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
